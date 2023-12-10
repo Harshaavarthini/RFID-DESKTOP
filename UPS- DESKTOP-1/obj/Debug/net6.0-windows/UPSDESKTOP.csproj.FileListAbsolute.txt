@@ -1,0 +1,10 @@
+C:\Users\Harshaa\OneDrive\Desktop\Projects\ups\UPSDESKTOP\UPS- DESKTOP-1\obj\Debug\net6.0-windows\UPSDESKTOP.csproj.AssemblyReference.cache
+C:\Users\Harshaa\OneDrive\Desktop\Projects\ups\UPSDESKTOP\UPS- DESKTOP-1\obj\Debug\net6.0-windows\UserControls\MyOption.baml
+C:\Users\Harshaa\OneDrive\Desktop\Projects\ups\UPSDESKTOP\UPS- DESKTOP-1\obj\Debug\net6.0-windows\UserControls\MyTextBox.baml
+C:\Users\Harshaa\OneDrive\Desktop\Projects\ups\UPSDESKTOP\UPS- DESKTOP-1\obj\Debug\net6.0-windows\App.baml
+C:\Users\Harshaa\OneDrive\Desktop\Projects\ups\UPSDESKTOP\UPS- DESKTOP-1\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Harshaa\OneDrive\Desktop\Projects\ups\UPSDESKTOP\UPS- DESKTOP-1\obj\Debug\net6.0-windows\UserControls\MyOption.g.cs
+C:\Users\Harshaa\OneDrive\Desktop\Projects\ups\UPSDESKTOP\UPS- DESKTOP-1\obj\Debug\net6.0-windows\UserControls\MyTextBox.g.cs
+C:\Users\Harshaa\OneDrive\Desktop\Projects\ups\UPSDESKTOP\UPS- DESKTOP-1\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Harshaa\OneDrive\Desktop\Projects\ups\UPSDESKTOP\UPS- DESKTOP-1\obj\Debug\net6.0-windows\UPSDESKTOP_MarkupCompile.cache
+C:\Users\Harshaa\OneDrive\Desktop\Projects\ups\UPSDESKTOP\UPS- DESKTOP-1\obj\Debug\net6.0-windows\UPSDESKTOP_MarkupCompile.lref

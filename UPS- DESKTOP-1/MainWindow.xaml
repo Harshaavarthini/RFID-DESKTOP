@@ -1,0 +1,218 @@
+﻿<Window x:Class="UPS__DESKTOP_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:uc="clr-namespace:UPS__DESKTOP_1.UserControls"
+        mc:Ignorable="d"
+        x:Name="mainWindow"
+         Height="750" Width="1000" 
+        WindowStyle="SingleBorderWindow"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        Icon="Images/UPS_logo_PNG1.png"
+        WindowState="Maximized">
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Left Section-->
+        <Border Background="#351c15" Padding="30" CornerRadius="0 0 0 0" >
+            <!--<StackPanel VerticalAlignment="Top">
+                <Image Source="/Images/UPS_logo_PNG1.png" Margin="0 0 0 40" Width="160" Height="160"/>
+
+                <TextBlock TextAlignment="Center" FontWeight="SemiBold" FontSize="28" Text="CONNECT" Foreground="#a69fa2"/>
+                <Button Style="{StaticResource buttonBlack}" x:Name="connect" Click="connect_Click">
+                    <fa:ImageAwesome Icon="AngleRight" Width="25" Height="25" Foreground="#ffffff" Margin="3 0 0 0"/>
+                </Button>
+            </StackPanel>-->
+
+            <Grid>
+                <StackPanel VerticalAlignment="Center">
+                    <Image Source="/Images/UPS_logo_PNG1.png" Margin="0 0 0 40" Width="160" Height="160"/>
+
+                    <TextBlock TextAlignment="Center" FontWeight="SemiBold" FontSize="28" Text="CONNECT" Foreground="#a69fa2" x:Name="txtCONNECT"/>
+                    <Button Style="{StaticResource buttonBlack}" x:Name="connectBUTTON" Click="connect_Click">
+                        <fa:ImageAwesome Icon="AngleRight" Width="25" Height="25" Foreground="#ffffff" Margin="3 0 0 0"/>
+                    </Button>
+                </StackPanel>
+
+
+                <!--<Grid HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 10 0 100">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="SCANNER" Style="{StaticResource text}" Foreground="#FFC107" Margin="10" VerticalAlignment="Center"  />
+                      <TextBlock Grid.Row="1" Grid.Column="0" Margin="0 0 100 0" Text="COM-PORT" Style="{StaticResource text}" Foreground="#FFC107" VerticalAlignment="Center"   />
+
+                    <ComboBox Grid.Column="1" Grid.Row="0" x:Name="txtSCANNERTYPE" Margin="0" SelectedIndex="0" VerticalAlignment="Center" Width="175" Height="40"  >
+                        <ComboBoxItem Content="Zebra fx96000"></ComboBoxItem>
+                        <ComboBoxItem Content="Impinj"></ComboBoxItem>
+                    </ComboBox>
+                    
+                        
+                        <ComboBox  SelectionChanged="txtCOMPort_SelectionChanged"  Grid.Column="1"  x:Name="txtCOMPort" Width="175" Height="40" />
+                        <Rectangle Grid.Column="1" RadiusX="30" RadiusY="30" Height="30" Width="30" Margin="20" Fill="Green">
+
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="20" Opacity="1" Color="LightGreen" ShadowDepth="0">
+                                    
+                                </DropShadowEffect>
+                            </Rectangle.Effect>
+                             
+                            
+                        </Rectangle>
+                    </Grid>-->
+
+
+                    
+
+
+                
+            </Grid>
+        </Border>
+
+        <!--Input Section-->
+        <Border Grid.Column="1" Padding="5"  Background="#FFC107" CornerRadius="0">
+            <Grid>
+               
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 10 0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Style="{StaticResource text1}" Grid.Column="1" HorizontalAlignment="Center" Margin="20 20 20 50" VerticalAlignment="Center" FontSize="50">PARCEL DETAILS</TextBlock>
+
+
+                    <WrapPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0" Margin="20">
+                        <TextBlock Text="AWB NUMBER" Style="{StaticResource text}"/>
+                        <Grid>
+                            <TextBox  Height="100"  Width="600" x:Name="txtAWB"   Style="{StaticResource textbox}" Foreground="Black" />
+                            <Button Style="{StaticResource buttonMainGreen}" FontSize="20" Margin="10" HorizontalAlignment="Right" Width="120" Height="40" Click="detailsButton_Click">Get Details</Button>
+                        </Grid>
+                    </WrapPanel>
+
+                    <WrapPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" Margin="20">
+                        <TextBlock Text="SERVICE TYPE" Style= "{StaticResource text}"/>
+                        <TextBox Height="100"  Width="600" Foreground="Black"  Style="{StaticResource textbox}" AcceptsReturn="True" x:Name="txtPRODUCT"/>
+                    </WrapPanel>
+
+                    <WrapPanel Orientation="Vertical" Grid.Row="1" Grid.Column="2" Margin="20">
+                        <TextBlock Text="DIMENSIONS" Style="{StaticResource text}"/>
+                        <TextBox  Height="100"  Foreground="Black"  Style="{StaticResource textbox}"  Width="600"  AcceptsReturn="True" x:Name="txtDIMENSIONS" />
+                    </WrapPanel>
+
+                    <WrapPanel Orientation="Vertical" Grid.Column="0" Grid.Row="2" Margin="20">
+                        <TextBlock Text="SENDER" Style="{StaticResource text}"/>
+                        <TextBox  Height="100"  Foreground="Black"  Style="{StaticResource textbox}" Width="600" x:Name="txtSENDER" />
+                    </WrapPanel>
+
+                    <WrapPanel Orientation="Vertical" Grid.Column="1" Grid.Row="2" Margin="20">
+                        <TextBlock Text="SENDER PHONE" Style="{StaticResource text}"/>
+                        <TextBox  Height="100"  Width="600"  Foreground="Black"  Style="{StaticResource textbox}"  x:Name="txtSENDERPHONE" />
+                    </WrapPanel>
+
+                    <WrapPanel Orientation="Vertical" Grid.Column="2" Grid.Row="2" Margin="20">
+                        <TextBlock Text="RECEIVER" Style="{StaticResource text}"/>
+                        <TextBox  Height="100"  Width="600"  Foreground="Black"  Style="{StaticResource textbox}" x:Name="txtRECEIVER" />
+
+                    </WrapPanel>
+
+                    <WrapPanel Orientation="Vertical" Grid.Column="0" Grid.Row="3" Margin="20">
+                        <TextBlock Text="RECEIVER PHONE" Style="{StaticResource text}"/>
+                        <TextBox  Height="100"  Width="600"  Foreground="Black"  Style="{StaticResource textbox}" x:Name="txtRECEIVERPHONE" />
+
+                    </WrapPanel>
+
+                    <StackPanel Grid.Column="1" Grid.Row="3" Margin="20">
+                        <TextBlock Text="ORIGIN" Style="{StaticResource text}"/>
+                        <TextBox AcceptsReturn="True"  Width="600"  Foreground="Black"  Style="{StaticResource textbox}" x:Name="txtORIGIN"  Height="100">
+                           
+                        </TextBox>
+
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2" Grid.Row="3" Margin="20">
+                        <TextBlock Text="DESTINATION" Style="{StaticResource text}"/>
+                        <TextBox  Height="100"  Width="600"  Foreground="Black"  Style="{StaticResource textbox}" AcceptsReturn="True" x:Name="txtDESTINATION" />
+
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Grid.Row="4" Margin="20">
+                        <TextBlock Text="RFID" Style="{StaticResource text}"/>
+                        <TextBox  Height="100" Width="600"  Foreground="Black"  Style="{StaticResource textbox}" AcceptsReturn="True" x:Name="txtRFID" />
+                        
+                    </StackPanel>
+
+                    <!--<StackPanel Grid>
+                        
+                    </StackPanel>-->
+
+
+
+                    
+
+                    
+                   
+                     
+                   
+                    <!--<Button Grid.Column="2" Grid.Row="0" x:Name="rfidButton"  Margin="10,9,10,9" Style="{StaticResource buttonMainGreen}" Height="40"  Content="GET DETAILS" Click="detailsButton_Click"/>-->
+
+
+                    
+
+                        <Button Grid.Column="2" Grid.Row="6" Style="{StaticResource buttonMain}" Margin="20 0 10 0" Width="150" Content="RESET" Click="Button_Click_1" Padding="10 0" FontSize="15"/>
+
+                        <Button Grid.Column="1" Grid.Row="6" Style="{StaticResource buttonMainGreen}" Margin="10"  Padding="10 0" Click="Button_Click" FontSize="20" Width='250'>
+                            <Button.Content>
+                                <TextBlock Text="LINK WITH RFID"
+                                           Margin="12, 0"/>
+                            </Button.Content>
+                        </Button>
+                   
+
+                </Grid>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>

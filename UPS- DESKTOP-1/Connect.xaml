@@ -1,0 +1,54 @@
+﻿<Window x:Class="UPS__DESKTOP_1.Connect"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:uc="clr-namespace:UPS__DESKTOP_1.UserControls"
+        mc:Ignorable="d"
+        x:Name="ConnectWindow"
+        Title="ConnectWindow" Height="350" Width="500" 
+        WindowStyle="None"
+        
+        Background="Transparent"
+        AllowsTransparency="True"
+        Loaded="ConnectWindow_Loaded">
+    <Grid>
+        <Border CornerRadius="25 25 25 25" Padding="20" Background="#a49cad">
+            <Grid>
+                <!--<Image Source="/Images/close.png" Width="25" Margin="0 4 5 0" Style="{StaticResource iconApp}" MouseLeftButtonDown="CloseButton_Click"/>
+                <Image Source="/Images/minimize.png" Width="20" Margin="0 7 40 0" Style="{StaticResource iconApp}" MouseLeftButtonDown="CloseButton_Click"/>-->
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 10 0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="SCANNER" Style="{StaticResource text}"  Margin="10" VerticalAlignment="Center"  />
+                    <TextBlock Grid.Row="1" Text="COM-PORT" Style="{StaticResource text}"  VerticalAlignment="Center"  Margin="10"  />
+
+                    <ComboBox Grid.Column="1" Grid.Row="0" x:Name="txtSCANNERTYPE" Margin="0" SelectedIndex="0" VerticalAlignment="Center" Width="175" Height="40"   HorizontalAlignment='Center' FontSize="20">
+                        <ComboBoxItem Content="Zebra fx96000" Width="175"></ComboBoxItem>
+                        <ComboBoxItem Content="Impinj R700" Width="175"></ComboBoxItem>
+                        <ComboBoxItem Content="Honeywell HI21(handler)" Width="175"></ComboBoxItem>
+
+                    </ComboBox>
+                    <ComboBox Margin="0" Grid.Row="1" Grid.Column="1" SelectionChanged="txtCOMPort_SelectionChanged" x:Name="txtCOMPort" Width="175" Height="40" FontSize="20"/>
+
+
+                        <Button Grid.Row ="2" Style="{StaticResource buttonMain}" Margin="0 40 40 0" Content="Cancel" Width="100" x:Name="Cancel" Click="Cancel_Click" HorizontalAlignment="Right" />
+                        <Button Grid.Row ="2" Grid.Column="1"  Style="{StaticResource buttonMainGreen}" Margin="0 40 0 0" Content="Connect" Click="Button_Click" Width="100" />
+
+
+                </Grid>
+            </Grid>
+
+        </Border>
+    </Grid>
+</Window>
